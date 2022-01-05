@@ -13,6 +13,13 @@ Author URI: https://www.karks.com
 function karks_acf_init() {
 if (is_plugin_active('advanced-custom-fields-pro/acf.php')) { 
     // ACF PRO is active - we're all good!
+	
+} else {
+	// ACF PRO isn't active - show a message.
+	echo "<div class='error notice is-dismissible'><p>Karks Custom ACF Blocks requires <a href='https://www.advancedcustomfields.com/' target='_blank'>Advanced Custom Fields PRO</a> to work. Please make sure to install and activate it.</p><button type='button' class='notice-dismiss'><span class='screen-reader-text'>Dismiss this notice.</span></button></div>";
+} 
+}
+add_action( 'admin_init', 'karks_acf_init' );
 	 
 
 	/* Create a Custom Save Path for ACF JSON Files */
@@ -116,11 +123,3 @@ if (is_plugin_active('advanced-custom-fields-pro/acf.php')) {
 
 	}    
 	add_action( 'init', 'my_custom_wp_block_patterns' );
-
-
-} else {
-	// ACF PRO isn't active - show a message.
-	echo "<div class='error notice is-dismissible'><p>Karks Custom ACF Blocks requires <a href='https://www.advancedcustomfields.com/' target='_blank'>Advanced Custom Fields PRO</a> to work. Please make sure to install and activate it.</p><button type='button' class='notice-dismiss'><span class='screen-reader-text'>Dismiss this notice.</span></button></div>";
-} 
-}
-add_action( 'admin_init', 'karks_acf_init' );
