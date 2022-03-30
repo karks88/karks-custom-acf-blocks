@@ -84,16 +84,16 @@ add_action( 'admin_init', 'karks_acf_init' );
 		// Check function exists.
 		if( function_exists('acf_register_block_type') ) {
 
-			// Example Block Registration
+			// Karks File List
 			acf_register_block_type(array(
-				'name'              => 'example-block',
-				'title'             => __('An Example Block'),
-				'description'       => __('A block description.'),
-				'render_template'   => plugin_dir_path( __FILE__ ) . 'blocks/karks-custom-acf-blocks/file.php',
-				'enqueue_style'     => plugins_url( 'boggs-blocks/blocks/karks-custom-acf-blocks/block-styles.css', dirname(__FILE__) ),
+				'name'              => 'karks-document-list',
+				'title'             => __('Document List'),
+				'description'       => __('Display a list of documents for downloading.'),
+				'render_template'   => plugin_dir_path( __FILE__ ) . 'blocks/karks-document-list/karks-document-list.php',
+				'enqueue_style'     => plugins_url( 'karks-custom-acf-blocks/blocks/karks-document-list/block-styles.css', dirname(__FILE__) ),
 				'category'          => 'karks_blocks_cat',
 				'icon'              => 'media-document',
-				'keywords'          => array( 'keyword 1', 'keyword 2', 'keyword 3' ),
+				'keywords'          => array( 'document', 'download', 'list' ),
 				'mode'				=> 'edit',
 				'supports' 			=> array( 'mode' => true ), // False = Disable preview toggle.
 			));

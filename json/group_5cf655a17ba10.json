@@ -1,0 +1,103 @@
+{
+    "key": "group_5cf655a17ba10",
+    "title": "Document Listing",
+    "fields": [
+        {
+            "key": "field_5cf655b709906",
+            "label": "Page Documents",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Use the fields below to manage a document listing for this page.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_5cf655ef09907",
+            "label": "Documents",
+            "name": "documents",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_5cf6565309909",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add a Document",
+            "sub_fields": [
+                {
+                    "key": "field_5cf6561409908",
+                    "label": "File",
+                    "name": "file",
+                    "type": "file",
+                    "instructions": "Upload a File\r\n(PDF, DOC\/DOCX, XLS\/XLSX formats accepted)",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "35",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_size": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_5cf6565309909",
+                    "label": "Title",
+                    "name": "title",
+                    "type": "text",
+                    "instructions": "Give this document a title.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/karks-document-list"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "permalink"
+    ],
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1648667227
+}
